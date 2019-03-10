@@ -49,8 +49,8 @@
 			"unityMode": "webgl"
 		};
 	</script>
-	<script type="text/javascript" src="<%- assetsUrl %>/vendors.js"></script>
-	<script type="text/javascript" src="<%- assetsUrl %>/<%- plannerVersion %>-<%- roomTypeHandle %>/bundle.js"></script>
+	<script type="text/javascript" src="<%- assetsUrl %>/vendors/vendors.js"></script>
+	<script type="text/javascript" src="<%- assetsUrl %>/<%- plannerVersion %>-<%- roomTypeHandle %>/main.js"></script>
 </body>
 
 </html>
