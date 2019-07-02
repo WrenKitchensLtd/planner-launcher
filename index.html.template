@@ -1,46 +1,14 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<title>Wren Planner - <%- plannerVersionTitle %></title>
-	<link rel="stylesheet" type="text/css" href="<%- assetsUrl %>/<%- plannerVersion %>-<%- roomTypeHandle %>/main.css">
+	<link rel="stylesheet" href="<%- assetsUrl %>/<%- plannerVersion %>-<%- roomTypeHandle %>/main.css">
 </head>
 
-<body class="theme-a">
-	<div id="application">
-		<div id="splash-container" class="overlay">
-			<div id="splash" class="<%- plannerVersion %> <%- roomTypeHandle %>">
-				<div class="messages">
-					<p class="mainLoading">Loading, please wait...</p>
-					<p id="loadErrors"></p>
-				</div>
-			</div>
-		</div>
-		<div id="navigation">
-			<a href="#" id="nav-bar-next" data-direction="1"></a>
-			<a href="#" id="nav-bar-back"></a>
-			<section id="slider">
-				<ul></ul>
-			</section>
-		</div>
-		<div id="application-content">
-			<div id="context-menu">
-				<section id="context-bar">
-					<img class="logo" data-logo="wren">
-				</section>
-			</div>
-			<div id="inspector-panel" class="hidden"></div>
-			<div id="application-views">
-				<div id="canvasLayer" class="planner-view canvas">
-					<div id="canvasOverlays"></div>
-				</div>
-				<div id="unityLayer" class="planner-view unity"></div>
-				<div id="htmlLayer" class="planner-view html"></div>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript">
+<body>
+	<div id="application"></div>
+	<script>
 		var WREN = {
 			"launch": <%= launchParams %>,
 			"ckValue": "666",
@@ -49,8 +17,7 @@
 			"unityMode": "webgl"
 		};
 	</script>
-	<script type="text/javascript" src="<%- assetsUrl %>/vendors/vendors.js"></script>
-	<script type="text/javascript" src="<%- assetsUrl %>/<%- plannerVersion %>-<%- roomTypeHandle %>/main.js"></script>
+	<script src="<%- assetsUrl %>/vendors/vendors.js"></script>
+	<script src="<%- assetsUrl %>/<%- plannerVersion %>-<%- roomTypeHandle %>/main.js"></script>
 </body>
-
 </html>
